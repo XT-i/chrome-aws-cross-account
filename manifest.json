@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome AWS cross account plugin",
+  "description": "Chrome plugin that allows sync storage based AWS cross account role management",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "AWS Roles!"
+  },
+  "permissions": [
+    "cookies",
+    "https://*.aws.amazon.com/*"
+  ]
+}
