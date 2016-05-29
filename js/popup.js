@@ -116,3 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+function getConfig() {
+    chrome.storage.sync.set()
+}
