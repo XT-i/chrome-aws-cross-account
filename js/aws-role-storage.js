@@ -15,6 +15,7 @@ AwsRoleStorage.prototype.initStorage = function(result){
         chrome.storage.sync.set({"awsRoleStorage": this}, function(){console.log("AWS role storage created")});
         console.log(this);
     }
+    $("#content").trigger("awsRoleStorageReady");
 };
 
 AwsRoleStorage.prototype.updateStorage = function(){

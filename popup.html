@@ -30,7 +30,29 @@
     <script src="js/popup.js"></script>
 </head>
 <body>
-<h1>Hello!</h1>
+<div class="container">
+    <div id="content">
+        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+            <li class="active"><a href="#groups" data-toggle="tab">Groups</a></li>
+            <li><a href="#roles" data-toggle="tab">Roles</a></li>
+            <li><a href="#settings" data-toggle="tab">Settings</a></li>
+        </ul>
+        <div id="my-tab-content" class="tab-content">
+            <div class="tab-pane active" id="groups">
+                <h1>Groups</h1>
+                <p>red red red red red red</p>
+            </div>
+            <div class="tab-pane" id="roles">
+                <ul class="list-group" id="roles-list">
+                </ul>
+            </div>
+            <div class="tab-pane" id="settings">
+                <h1>Settings</h1>
+                <p>yellow yellow yellow yellow yellow</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="status"></div>
 <img id="image-result" hidden>
 </body>
