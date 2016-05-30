@@ -18,7 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var tabCreateObject = {
             url:'https://signin.aws.amazon.com/switchrole?account=' + $(this).data('xaws-account') + '&roleName=' + $(this).data('xaws-role') + '&displayName=' + $(this).data('xaws-displayname')
         };
-        chrome.tabs.create(tabCreateObject, function(tab){console.log(tab)})
+        chrome.tabs.create(tabCreateObject, function(tab){
+            var executeScriptObject = {
+                file: 'js/inject.js'
+            };
+            chrome.tabs.executeScript(tab.id, executeScriptObject);
+        })
     });
 
     $( "#content" ).on( "awsRoleStorageReady", function( event ) {
